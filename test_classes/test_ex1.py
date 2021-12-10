@@ -1,4 +1,4 @@
-from Ex1 import Bola
+from Classes.Ex1 import Bola
 from unittest import TestCase
 
 

@@ -1,5 +1,5 @@
 from unittest import TestCase
-from Ex3 import Retangulo
+from Classes.Ex3 import Retangulo
 
 
 class TesteRetangulo(TestCase):

@@ -1,4 +1,4 @@
-from Ex5 import ContaCorrente
+from Classes.Ex5 import ContaCorrente
 from unittest import TestCase
 
 

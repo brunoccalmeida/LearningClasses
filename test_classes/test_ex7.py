@@ -1,4 +1,4 @@
-from Ex7 import Tamagoshi
+from Classes.Ex7 import Tamagoshi
 from unittest import TestCase
 
 

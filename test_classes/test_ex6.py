@@ -1,5 +1,5 @@
 from unittest import TestCase
-from Ex6 import Televisao
+from Classes.Ex6 import Televisao
 
 
 class TestaTelevisao(TestCase):

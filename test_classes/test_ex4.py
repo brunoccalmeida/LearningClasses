@@ -1,4 +1,4 @@
-from Ex4 import Pessoa
+from Classes.Ex4 import Pessoa
 from unittest import TestCase
 
 

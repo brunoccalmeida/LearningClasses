@@ -1,5 +1,5 @@
 from unittest import TestCase
-from Ex2 import Quadrado
+from Classes.Ex2 import Quadrado
 
 
 class TesteQuadrado(TestCase):
