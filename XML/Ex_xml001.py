@@ -14,4 +14,3 @@ tree = ET.fromstring(data)
 print("Name:", tree.find("name").text)
 print("Phone:", tree.find("phone").text)
 print("Email hide:", tree.find("email").get("hide"))
-
