@@ -14,10 +14,10 @@
 # dia da semana do resultado. O dia da semana no resultado deve aparecer após o tempo e antes do número de dias depois.
 # Suponha que os horários de início são tempos válidos. Os minutos no tempo de duração serão um número inteiro menor
 # que 60, mas a hora pode ser qualquer número inteiro.
-def round_up_number(n):
-    if n == int(n):
-        return n
-    return int(n + 1)
+# def round_up_number(n):
+#     if n == int(n):
+#         return n
+#     return int(n + 1)
 
 
 def time_flag_change(time_flag):
@@ -32,7 +32,7 @@ def add_time(start, duration, day_of_week=None):
     start_time_str = start
     hour_start_int = int(start_time_str.split(":")[0])
     minutes_start_int = int(start_time_str.split(":")[1][:2])
-    time_flag = start_time_str.split(":")[1][3:]
+    time_flag = start_time_str.split(":")[1][3:]  # Time flag can be "AM" or "PM"
     time_flag_start = time_flag
 
     duration_str = duration
@@ -41,15 +41,17 @@ def add_time(start, duration, day_of_week=None):
     time_flag_hour = hour_start_int + (duration_hour_int % 24)
 
     if duration_min_int + minutes_start_int > 60:
+        # this is used to determine if time_flag, after adding the duration minutes, stays the same or changes
         time_flag_hour += 1
 
     if time_flag_hour >= 12:
+        # this will determine if time_flag changes at the beginning with the sum
+        # of the start minutes and duration minutes
         time_flag = time_flag_change(time_flag)
 
     hour_start_plus_duration = hour_start_int + duration_hour_int
     minutes_start_plus_duration = minutes_start_int + duration_min_int
     minutes_final = minutes_start_plus_duration
-
     hours_from_sum_of_minutes = 0
 
     if minutes_start_plus_duration >= 60:
